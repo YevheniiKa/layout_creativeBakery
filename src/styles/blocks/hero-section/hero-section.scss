@@ -1,0 +1,28 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    @extend %body-text;
+
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  &__title {
+    text-align: center;
+
+    @extend %h1-mobile;
+  }
+  &__image {
+    width: 288px;
+    height: 290px;
+  }
+}
+
+.button {
+  @extend %button;
+  &__icon {
+    mask-image: url('/src//images/icons/Icon-cookie.svg');
+  }
+}

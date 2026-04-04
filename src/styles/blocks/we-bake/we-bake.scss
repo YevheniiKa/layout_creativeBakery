@@ -1,0 +1,49 @@
+.we-bake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    @extend %h2-mobile;
+
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    @extend %body-text;
+  }
+}
+
+.link {
+  &__btn {
+    &-icon-order {
+      mask-image: url('/src//images/icons/Icon-arrow.svg');
+    }
+  }
+}
+
+.product-card {
+  margin-top: 56px;
+
+  &__image {
+    display: block;
+    width: 288px;
+    height: 356px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__name {
+    @extend %text-uppercase;
+
+    color: $c-grey;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    @extend %body-text;
+
+    margin-bottom: 16px;
+  }
+}

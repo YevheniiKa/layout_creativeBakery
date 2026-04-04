@@ -1,12 +1,7 @@
 .header {
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 16px;
-    align-items: center;
-  }
-  &__logo {
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &__burger-menu {
     display: block;
@@ -27,7 +22,9 @@
     }
   }
 }
-
+.logo-btn {
+  @extend %logo;
+}
 .mobile-menu {
   display: none;
   &__list {
@@ -46,23 +43,15 @@
 .menu-item {
 }
 
-.menu-link {
-  line-height: 150%;
+.link {
+  @extend %link;
   &__btn {
+    &-icon-contact-us {
+      mask-image: url('/src//images/icons/Icon-phone.svg');
+    }
   }
-  &__icon {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-color: $c-accent-orange;
-    mask-image: url('/src//images/icons/Icon-phone.svg');
-    mask-repeat: no-repeat;
-    mask-size: contain;
-  }
+
   &__text {
-    text-transform: uppercase;
-    color: $c-accent-orange;
-    font-weight: 500;
   }
 }
 .menu-link,

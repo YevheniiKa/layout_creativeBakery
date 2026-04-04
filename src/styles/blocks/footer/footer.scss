@@ -1,0 +1,35 @@
+.footer-wrapper {
+  padding: 56px 16px;
+}
+
+.logo-btn {
+  @extend %logo;
+  .logo-icon-footer {
+    background-color: $c-white;
+  }
+}
+
+.menu-wrapper {
+  margin: 40px 0 64px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+
+  &__title {
+    @extend %text-uppercase;
+
+    color: $c-grey;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: $c-white;
+  }
+}

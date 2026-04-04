@@ -2,13 +2,12 @@
 @import 'reset';
 @import 'fonts';
 @import 'typography';
-@import './blocks/header/header.scss';
+@import './blocks/header/header';
+@import './blocks/hero-section/hero-section';
+@import './blocks/we-bake/we-bake';
+@import './blocks/about-us/about-us';
+@import './blocks/footer/footer';
+@import './blocks/universal-styles';
 body {
   background: $c-light-pink;
-  * {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: $c-black;
-  }
 }
