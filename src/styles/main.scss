@@ -1,7 +1,14 @@
 @import 'utils';
+@import 'reset';
 @import 'fonts';
 @import 'typography';
-
+@import './blocks/header/header.scss';
 body {
-  background: $c-gray;
+  background: $c-light-pink;
+  * {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $c-black;
+  }
 }

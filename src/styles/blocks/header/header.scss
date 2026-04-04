@@ -1,0 +1,74 @@
+.header {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px;
+    align-items: center;
+  }
+  &__logo {
+  }
+
+  &__burger-menu {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    background-color: $c-black;
+    mask-image: url('/src//images/icons/Icon-menu.svg');
+
+    mask-repeat: no-repeat;
+    mask-size: contain;
+
+    &:hover {
+      background-color: $c-accent-orange;
+    }
+    &--open {
+      mask-image: url('/src//images/icons/Icon-close.svg');
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+  &__list {
+    margin-top: 132px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  &--open {
+    display: block;
+  }
+}
+
+.menu-item {
+}
+
+.menu-link {
+  line-height: 150%;
+  &__btn {
+  }
+  &__icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: $c-accent-orange;
+    mask-image: url('/src//images/icons/Icon-phone.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+  &__text {
+    text-transform: uppercase;
+    color: $c-accent-orange;
+    font-weight: 500;
+  }
+}
+.menu-link,
+.menu-link-contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
