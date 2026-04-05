@@ -9,6 +9,7 @@ burgerBtn.addEventListener('click', () => {
 
   burgerBtn.setAttribute('aria-expanded', isOpen);
   mobileMenu.setAttribute('aria-hidden', !isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
 btn.addEventListener('click', () => {

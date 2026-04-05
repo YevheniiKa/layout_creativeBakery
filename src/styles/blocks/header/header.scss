@@ -1,4 +1,11 @@
+.header-container {
+  padding: 16px 20px 16px 16px;
+}
+
 .header {
+  position: relative;
+  z-index: 102;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,11 +29,26 @@
     }
   }
 }
+
 .logo-btn {
   @extend %logo;
 }
+
 .mobile-menu {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+
+  background-color: $c-light-pink;
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   &__list {
     margin-top: 132px;
     display: flex;
@@ -36,7 +58,8 @@
     gap: 24px;
   }
   &--open {
-    display: block;
+    opacity: 1;
+    visibility: visible;
   }
 }
 

@@ -81,7 +81,8 @@
   height: 56px;
   border-radius: 32px;
   border: 2px solid $c-accent-orange;
-  .button__link {
+
+  .button__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,6 +101,39 @@
   }
   .button__text {
     @extend %text-uppercase;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $c-accent-orange;
+    .button__icon {
+      background-color: $c-white;
+    }
+    .button__text {
+      color: $c-white;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $c-dark-orange;
+    border-color: $c-dark-orange;
+
+    .button__icon {
+      background-color: $c-white;
+    }
+    .button__text {
+      color: $c-white;
+    }
+  }
+
+  &:disabled {
+    border-color: $c-light-orange;
+    .button__icon {
+      background-color: $c-light-orange;
+    }
+    .button__text {
+      color: $c-light-orange;
+    }
   }
 }
 

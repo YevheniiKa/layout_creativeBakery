@@ -1,24 +1,48 @@
+.about-us-container {
+  position: relative;
+
+  padding: 72px 16px;
+
+  @include tablet {
+    padding: 152px 44px;
+  }
+}
+
 .about-us {
+  &__title-wrapper {
+    display: grid;
+    gap: 32px;
+
+    margin-bottom: 64px;
+  }
   &__title {
     @extend %h2-mobile;
 
     text-align: left;
-    margin-bottom: 32px;
   }
 
   &__text {
     @extend %body-text;
+  }
 
-    margin-bottom: 64px;
+  @include tablet {
+    &__title-wrapper {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: 24px;
+
+      margin-bottom: 72px;
+    }
+
+    &__title {
+      font-size: 56px;
+    }
   }
 }
 
 .results {
   &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
     gap: 48px;
   }
 
@@ -28,14 +52,34 @@
   &__crumbs-image {
     position: absolute;
     top: 53%;
-    left: -14px;
-    width: 320px;
+    left: 0;
+    width: 100%;
     height: 300px;
     z-index: -1;
+  }
+
+  @include tablet {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+
+      gap: 80px 24px;
+    }
+
+    &__crumbs-image {
+      top: 200px;
+      left: 121px;
+
+      width: 526px;
+      height: 493px;
+    }
   }
 }
 
 .item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
   &__num {
     @extend %big-text;
   }

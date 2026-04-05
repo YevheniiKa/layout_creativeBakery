@@ -1,17 +1,31 @@
-.we-bake {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.we-bake-container {
+  padding: 32px 16px 0;
 
+  @include tablet {
+    padding: 0 44px;
+  }
+}
+
+.we-bake {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
   &__title {
     @extend %h2-mobile;
 
     text-align: left;
-    margin-bottom: 24px;
   }
 
   &__text {
     @extend %body-text;
+  }
+
+  @include tablet {
+    &__title {
+      font-size: 56px;
+    }
   }
 }
 
@@ -23,11 +37,24 @@
   }
 }
 
-.product-card {
+.product-card-wrapper {
   margin-top: 56px;
 
+  display: grid;
+  row-gap: 56px;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 80px;
+
+    gap: 80px 24px;
+  }
+}
+
+.product-card {
+  width: 288px;
+
   &__image {
-    display: block;
     width: 288px;
     height: 356px;
     border-radius: 8px;
@@ -45,5 +72,13 @@
     @extend %body-text;
 
     margin-bottom: 16px;
+  }
+
+  @include tablet {
+    width: 328px;
+    &__image {
+      width: 328px;
+      height: 424px;
+    }
   }
 }
