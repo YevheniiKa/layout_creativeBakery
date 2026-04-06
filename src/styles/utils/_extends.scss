@@ -140,8 +140,18 @@
 %link {
   display: flex;
   align-items: center;
+  justify-content: start;
+  width: max-content;
   gap: 4px;
-
+  &:hover,
+  &:focus {
+    .link__btn-icon {
+      background-color: $c-dark-orange;
+    }
+    .link__text {
+      color: $c-dark-orange;
+    }
+  }
   .link__btn {
   }
   .link__btn-icon {

@@ -1,8 +1,19 @@
 .hero-section-container {
   padding: 32px 16px 40px;
+  margin: 0 auto;
 
   @include tablet {
     padding: 80px 44px 228px;
+  }
+
+  @include desktop {
+    padding: 0 44px 66px;
+    max-width: 1200px;
+  }
+
+  @include desktop-wide {
+    padding: 0 124px 66px;
+    max-width: 1440px;
   }
 }
 
@@ -11,17 +22,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   &__text {
     @extend %body-text;
 
     text-align: center;
     margin-bottom: 32px;
   }
+
   &__title {
     text-align: center;
 
     @extend %h1-mobile;
   }
+
   &__image {
     width: 288px;
     height: 290px;
@@ -40,6 +54,7 @@
       font-size: 80px;
       z-index: 3;
     }
+
     &__image {
       position: absolute;
       top: 13%;
@@ -49,15 +64,43 @@
       z-index: 2;
     }
   }
+
+  @include desktop {
+    &__text {
+      margin-bottom: 8px;
+      margin-top: 135px;
+
+      max-width: 260px;
+    }
+
+    &__title {
+      font-size: 136px;
+      text-wrap: nowrap;
+    }
+
+    &__image {
+      top: 0;
+      left: 29%;
+      width: 544px;
+      height: 546px;
+    }
+  }
 }
 
 .button {
   @extend %button;
+
   &__icon {
     mask-image: url('/src//images/icons/Icon-cookie.svg');
   }
 
   @include tablet {
     margin-top: 210px;
+  }
+
+  @include desktop {
+    margin-top: 64px;
+    align-self: flex-start;
+    margin-bottom: calc(161px - 66px);
   }
 }

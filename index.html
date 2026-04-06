@@ -16,8 +16,12 @@
     <header class="header-container">
       <div class="header">
         <button class="logo-btn">
-          <span class="logo-icon" />
+          <a
+            href="#"
+            class="logo-icon"
+          />
         </button>
+
         <button
           class="header__burger-btn"
           aria-expanded="false"
@@ -25,51 +29,57 @@
         >
           <span class="header__burger-menu" />
         </button>
-      </div>
 
-      <nav
-        id="mobile-menu"
-        class="mobile-menu"
-        aria-hidden="true"
-      >
-        <ul class="mobile-menu__list">
-          <li class="menu-item">
-            <a
-              class="menu-link"
-              href="#"
-            >
-              Products
-            </a>
-          </li>
-          <li class="menu-item">
-            <a
-              class="menu-link"
-              href="#"
-            >
-              About Us
-            </a>
-          </li>
-          <li class="menu-item">
-            <a
-              class="menu-link"
-              href="#"
-            >
-              Blog
-            </a>
-          </li>
-          <li class="menu-item">
-            <a
-              class="link"
-              href="#"
-            >
+        <nav
+          id="mobile-menu"
+          class="header__mobile-menu mobile-menu"
+          aria-hidden="true"
+        >
+          <ul class="mobile-menu__list">
+            <li class="menu-item">
+              <a
+                class="menu-link"
+                href="#products"
+              >
+                Products
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                class="menu-link"
+                href="#about-us"
+              >
+                About Us
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                class="menu-link"
+                href="#"
+              >
+                Blog
+              </a>
+            </li>
+            <li class="menu-item">
+              <a
+                class="link"
+                href="#contact-us"
+              >
+                <button class="link__btn">
+                  <span class="link__btn-icon link__btn-icon-contact-us" />
+                </button>
+                <span class="link__text">Contact Us</span>
+              </a>
+            </li>
+
+            <li class="menu-item">
               <button class="link__btn">
-                <span class="link__btn-icon link__btn-icon-contact-us" />
+                <span class="link__btn-icon link__btn-icon-theme-switcher" />
               </button>
-              <span class="link__text">Contact Us</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="main-content">
@@ -86,15 +96,21 @@
           />
 
           <button class="button">
-            <div class="button__wrapper">
+            <a
+              href="#products"
+              class="button__wrapper"
+            >
               <span class="button__icon"></span>
               <span class="button__text">Learn more</span>
-            </div>
+            </a>
           </button>
         </div>
       </section>
 
-      <section class="we-bake-container">
+      <section
+        class="we-bake-container"
+        id="products"
+      >
         <div class="we-bake">
           <div class="we-bake__wrapper">
             <h2 class="we-bake__title">What we bake</h2>
@@ -147,7 +163,9 @@
                 <span class="link__text">Order</span>
               </a>
             </div>
+          </div>
 
+          <div class="product-card-wrapper">
             <div class="product-card">
               <img
                 src="/src/images/product-img-03.png"
@@ -190,7 +208,9 @@
                 <span class="link__text">Order</span>
               </a>
             </div>
+          </div>
 
+          <div class="product-card-wrapper">
             <div class="product-card">
               <img
                 src="/src/images/product-img-05.png"
@@ -237,7 +257,10 @@
         </div>
       </section>
 
-      <section class="about-us-container">
+      <section
+        class="about-us-container"
+        id="about-us"
+      >
         <div class="about-us">
           <div class="about-us__title-wrapper">
             <h2 class="about-us__title">Few words about us</h2>
@@ -254,22 +277,22 @@
           <div class="results">
             <ul class="results__list">
               <li class="results__item item">
-                <span class="item__num">2015</span>
+                <span class="item__num big-text">2015</span>
                 <span class="item__name">Foundation year</span>
               </li>
 
               <li class="results__item item">
-                <span class="item__num">23</span>
+                <span class="item__num big-text">23</span>
                 <span class="item__name">Stores</span>
               </li>
 
               <li class="results__item item">
-                <span class="item__num">155</span>
+                <span class="item__num big-text">155</span>
                 <span class="item__name">Companies</span>
               </li>
 
               <li class="results__item item">
-                <span class="item__num">10K+</span>
+                <span class="item__num big-text">10K+</span>
                 <span class="item__name">Clients</span>
               </li>
               <img
@@ -284,129 +307,135 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__container">
-        <button class="logo-btn">
-          <span class="logo-icon logo-icon-footer" />
-        </button>
+      <div class="footer__wrapper">
+        <div class="footer__container">
+          <button class="logo-btn">
+            <span class="logo-icon logo-icon-footer" />
+          </button>
 
-        <ul class="footer-list">
-          <li class="footer-list__title">Menu</li>
+          <ul class="footer-list">
+            <li class="footer-list__title">Menu</li>
+            <li class="footer-list__item">
+              <a
+                class="footer-list__link"
+                href="#products"
+              >
+                Products
+              </a>
+            </li>
+            <li class="footer-list__item">
+              <a
+                class="footer-list__link"
+                href="#about-us"
+              >
+                About Us
+              </a>
+            </li>
+            <li class="footer-list__item">
+              <a
+                class="footer-list__link"
+                href="#"
+              >
+                Blog
+              </a>
+            </li>
+            <li class="footer-list__item">
+              <a
+                class="footer-list__link"
+                href="#"
+              >
+                Terms & Privacy
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__container">
+          <h2 class="footer__subtitle">Contact Us</h2>
+
+          <ul
+            class="footer-list"
+            id="contact-us"
+          >
+            <li class="footer-list__title">Call Us</li>
+            <li class="footer-list__item">
+              <a
+                class="footer-list__link"
+                href="tel:6295550129"
+              >
+                (629) 555-0129
+              </a>
+            </li>
+
+            <li class="footer-list__item">
+              <a
+                class="footer-list__link"
+                href="tel:6035550123"
+              >
+                (603) 555-0123
+              </a>
+            </li>
+            <li class="footer-list__item">
+              <a
+                class="footer-list__link"
+                href="tel:7045550127"
+              >
+                (704) 555-0129
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li class="footer-list__title">Email Us</li>
+            <li class="footer-list__item">
+              <a
+                class="footer-list__link"
+                href="mailto:bakerlab@example.com"
+              >
+                bakerlab@example.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="footer__social-media-list">
           <li class="footer-list__item">
             <a
               class="footer-list__link"
-              href="#"
+              href="https://www.facebook.com/"
+              target="_blank"
             >
-              Products
+              <span
+                class="footer-list__link-social-media social-media-facebook"
+              />
             </a>
           </li>
           <li class="footer-list__item">
             <a
               class="footer-list__link"
-              href="#"
+              href="https://www.instagram.com"
+              target="_blank"
             >
-              About Us
+              <span
+                class="footer-list__link-social-media social-media-instagram"
+              />
             </a>
           </li>
           <li class="footer-list__item">
             <a
               class="footer-list__link"
-              href="#"
+              href="https://x.com/"
+              target="_blank"
             >
-              Blog
-            </a>
-          </li>
-          <li class="footer-list__item">
-            <a
-              class="footer-list__link"
-              href="#"
-            >
-              Terms & Privacy
+              <span
+                class="footer-list__link-social-media social-media-twitter"
+              />
             </a>
           </li>
         </ul>
+
+        <span class="footer__copyright">© Bakerlab 2022</span>
       </div>
-
-      <div class="footer__container">
-        <h2 class="footer__subtitle">
-          Contact
-          <br />
-          Us
-        </h2>
-
-        <ul class="footer-list">
-          <li class="footer-list__title">Call Us</li>
-          <li class="footer-list__item">
-            <a
-              class="footer-list__link"
-              href="tel:6295550129"
-            >
-              (629) 555-0129
-            </a>
-          </li>
-
-          <li class="footer-list__item">
-            <a
-              class="footer-list__link"
-              href="tel:6035550123"
-            >
-              (603) 555-0123
-            </a>
-          </li>
-          <li class="footer-list__item">
-            <a
-              class="footer-list__link"
-              href="tel:7045550127"
-            >
-              (704) 555-0129
-            </a>
-          </li>
-        </ul>
-
-        <ul class="footer-list">
-          <li class="footer-list__title">Email Us</li>
-          <li class="footer-list__item">
-            <a
-              class="footer-list__link"
-              href="mailto:bakerlab@example.com"
-            >
-              bakerlab@example.com
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <ul class="footer__social-media-list">
-        <li class="footer-list__item">
-          <a
-            class="footer-list__link"
-            href="https://www.facebook.com/"
-          >
-            <span
-              class="footer-list__link-social-media social-media-facebook"
-            />
-          </a>
-        </li>
-        <li class="footer-list__item">
-          <a
-            class="footer-list__link"
-            href="https://www.instagram.com"
-          >
-            <span
-              class="footer-list__link-social-media social-media-instagram"
-            />
-          </a>
-        </li>
-        <li class="footer-list__item">
-          <a
-            class="footer-list__link"
-            href="https://x.com/"
-          >
-            <span class="footer-list__link-social-media social-media-twitter" />
-          </a>
-        </li>
-      </ul>
-
-      <span class="footer__copyright">© Bakerlab 2022</span>
     </footer>
     <script src="src/scripts/main.js"></script>
   </body>
