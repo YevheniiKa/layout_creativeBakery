@@ -79,8 +79,6 @@
       padding: 88px 124px;
       max-width: 1440px;
     }
-    &__container {
-    }
   }
 }
 
@@ -101,9 +99,6 @@
     @extend %text-uppercase;
 
     color: $c-grey;
-  }
-
-  &__item {
   }
 
   &__link {
@@ -127,8 +122,6 @@
         background-color: $c-white;
       }
     }
-  }
-  &__icon {
   }
 }
 
