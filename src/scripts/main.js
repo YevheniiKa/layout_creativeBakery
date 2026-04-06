@@ -3,7 +3,7 @@
 const burgerBtn = document.querySelector('.header__burger-btn');
 const mobileMenu = document.querySelector('.mobile-menu');
 const burgerIcon = document.querySelector('.header__burger-menu');
-const themeSwitcher = document.querySelector('.theme-switcher-btn');
+const themeSwitcher = document.querySelector('.link__btn-icon-theme-switcher');
 
 burgerBtn.addEventListener('click', () => {
   const isOpen = mobileMenu.classList.toggle('mobile-menu--open');
@@ -15,11 +15,5 @@ burgerBtn.addEventListener('click', () => {
 });
 
 themeSwitcher.addEventListener('click', () => {
-  const isLight = document.body.classList.toggle('light-theme');
-
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  document.body.classList.toggle('light-theme');
 });
-
-if (localStorage.getItem('theme') === 'light') {
-  document.body.classList.add('light-theme');
-}
