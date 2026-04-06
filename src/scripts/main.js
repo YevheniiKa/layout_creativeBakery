@@ -15,11 +15,5 @@ burgerBtn.addEventListener('click', () => {
 });
 
 themeSwitcher.addEventListener('click', () => {
-  const isLight = document.body.classList.toggle('light-theme');
-
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  document.body.classList.toggle('light-theme');
 });
-
-if (localStorage.getItem('theme') === 'light') {
-  document.body.classList.add('light-theme');
-}
